@@ -41,10 +41,9 @@ const handlers = {
         //compose speechOutput that simply reads all the collected slot values
         var answerOutput = randomPhrase(fruitAnswerIntro);
         
-        const intentObj = this.event.request.intent;
         var obj = this;
   
-        var isBerry = getAttribute(intentObj, 'isBerry', obj);
+        var isBerry = getAttribute(obj, 'isBerry');
         var fruitOutsideColour = getAttribute(intentObj, 'fruitOutsideColour', obj);
        
         if (isBerry == "yes" && fruitOutsideColour == "red"){
@@ -122,9 +121,10 @@ function randomPhrase(array) {
     return(array[i]);
 }
 
-function getAttribute(intentObj, slot,  obj) {
+function getAttribute(obj, slot) {
     // the argument is an applicable Intent 'slot' in the form of the string
-    /*global AlexaGuessFruit*/
+    var intentObj = obj.event.request.intent;
+ 
     if (!intentObj.slots[slot].value) {
         const slotToElicit = slot;
         const speechOutput = getAttributePrompt(slot);
