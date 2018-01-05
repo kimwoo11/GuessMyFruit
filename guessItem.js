@@ -167,7 +167,7 @@ const fruitData = {
     {
       "name": "grapefruit",
       "sizeTennisBall": "larger",
-      "colourInside": ["red"],
+      "colourInside": ["red", "pink"],
       "numberSeeds": "many",
       "colourOutside": ["orange"],
       "isLong": "no",
@@ -386,22 +386,6 @@ const fruitData = {
       "isEdibleSkin": "yes",
       "isBerry": "no",
       "isOneBiteSize": "no",
-      "seedsOutside": "no"
-    },
-    {
-      "name": "grape",
-      "sizeTennisBall": "smaller",
-      "colourInside": ["red", "purple", "green", "white", "clear"],
-      "numberSeeds": "many",
-      "colourOutside": ["red", "purple", "green"],
-      "isLong": "no",
-      "isStinky": "no",
-      "isSkinRough": "no",
-      "isCitrus": "no",
-      "isBellShape": "no",
-      "isEdibleSkin": "yes",
-      "isBerry": "no",
-      "isOneBiteSize": "yes",
       "seedsOutside": "no"
     },
     {
