@@ -184,13 +184,13 @@ function getAttribute(obj, slot) {
     
     if (yesArray.indexOf(obj.event.request.intent.slots[slot].value) != -1)
     {
-        obj.event.request.intent.slots[slot].value = "yes"
+        return "yes"
     }
     else if (noArray.indexOf(obj.event.request.intent.slots[slot].value) != -1)
     {
-        obj.event.request.intent.slots[slot].value = "no"
+        return "no"
     }
-   
+ 
    return obj.event.request.intent.slots[slot].value
 }
 
