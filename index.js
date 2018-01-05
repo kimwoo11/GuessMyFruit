@@ -197,7 +197,18 @@ function getAttribute(obj, slot) {
 function getAttributePrompt(slot)
 {
   switch(slot){
-   case 'isBerry': return 'Is the fruit you are thinking about a berry?';
-   case 'fruitOutsideColour': return 'What colour is the skin of the fruit?'
+   case "sizeTennisBall": return "Is your fruit smaller than, larger than, or around the same size as a tennis ball?";
+   case "colourInside": return "What colour is your fruit on the inside?"
+   case "colourOutside": return "What colour is your fruit on the outside?"
+   case "numberSeeds": return "Does your fruit have one pit, multiple seeds, or none?"
+   case "isLong": return "Is the shape of your fruit long?"
+   case "isStinky": return "Is your fruit stinky?"
+   case "isSkinRough": return "Is the skin of your fruit rough?"
+   case "isCitrus": return "Is your fruit a citrus fruit?"
+   case "isBellShape": return "Is your fruit bell-shaped?"
+   case "isEdibleSkin": return "Do you typically eat the skin of your fruit?"
+   case "isBerry": return "Is your fruit a berry?"
+   case "isOneBiteSize": return "Can you eat your fruit in one bite?"
+   case "seedsOutside": return "Does your fruit have visible seeds on the outside?"
   }
 }
