@@ -40,20 +40,44 @@ const handlers = {
 
         //compose speechOutput that simply reads all the collected slot values
         var answerOutput = randomPhrase(fruitAnswerIntro);
-        
-        const intentObj = this.event.request.intent;
+        var defaultAnswer = "Sorry, this a fruit I don't know about yet!";
         var obj = this;
   
-        var isBerry = getAttribute(intentObj, 'isBerry', obj);
-        var fruitOutsideColour = getAttribute(intentObj, 'fruitOutsideColour', obj);
+        var isBerry = getAttribute(obj, 'isBerry');
+        var fruitOutsideColour = getAttribute(obj, 'fruitOutsideColour');
        
-        if (isBerry == "yes" && fruitOutsideColour == "red"){
-            answerOutput += "a strawberry.";
+        if (isBerry == "yes") {
+            if (fruitOutsideColour == "red") {
+                answerOutput += "a strawberry.";
+            }
+            else if (fruitOutsideColour == "blue") {
+                answerOutput += "a blueberry.";
+            }
+            else if (fruitOutsideColour == "black") {
+                answerOutput += "a blackberry.";
+            }
+            else {
+                answerOutput = defaultAnswer;
+            }
         } 
-        else {
-            answerOutput += "a fruit I don't know about yet!";
+        else if (isBerry == "no") {
+            if (fruitOutsideColour == "green") {
+                answerOutput += "a watermeon.";
+            }
+            else if (fruitOutsideColour == "orange") {
+                answerOutput += "an orange.";
+            }
+            else if (fruitOutsideColour == "yellow") {
+                answerOutput += "a banana.";
+            }
+            else {
+                answerOutput = defaultAnswer;
+            }
         }
-        
+        else {
+            answerOutput = defaultAnswer;
+        }
+         
         this.response.speak(answerOutput);
         this.emit(':responseReady');
     },
@@ -122,9 +146,10 @@ function randomPhrase(array) {
     return(array[i]);
 }
 
-function getAttribute(intentObj, slot,  obj) {
+function getAttribute(obj, slot) {
     // the argument is an applicable Intent 'slot' in the form of the string
-    /*global AlexaGuessFruit*/
+    var intentObj = obj.event.request.intent;
+ 
     if (!intentObj.slots[slot].value) {
         const slotToElicit = slot;
         const speechOutput = getAttributePrompt(slot);
