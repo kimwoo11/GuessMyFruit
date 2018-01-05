@@ -44,7 +44,7 @@ const handlers = {
         var obj = this;
   
         var isBerry = getAttribute(obj, 'isBerry');
-        var fruitOutsideColour = getAttribute(intentObj, 'fruitOutsideColour', obj);
+        var fruitOutsideColour = getAttribute(obj, 'fruitOutsideColour');
        
         if (isBerry == "yes") {
             if (fruitOutsideColour == "red") {
