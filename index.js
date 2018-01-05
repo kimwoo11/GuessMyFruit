@@ -144,30 +144,30 @@ function getAttributePrompt(slot)
 }
 
 function getFruitFact(fruit) {
- switch (fruit) {
-		case "apple":
-			return ["Did you know that apples are part of the rose family? Cool, right?",
-				"Here is a fun fact about apple trees: they take four to five years to produce their first fruit.",
-				"Here is an interesting fact: It takes the energy from 50 leaves to produce one apple.That’s a lot of energy!"];
-		case "orange":
-			return ["Did you know that Oranges contain more fiber than most fruits and vegetables? That’s very healthy!",
-				"Here is a fun fact: the word “Orange” was first used to describe the colour and not the fruit.",
-				"Here is an interesting fact: there are now over 600 varieties of oranges worldwide!"];
-		case "strawberry":
-			return ["Did you know there are there are 200 seeds on an average strawberry? Interesting, right?",
-				"Here is a fun fact about strawberries: they are members of the rose family!",
-				"Here is an interesting fact: There is a museum in Belgium just for strawberries. Sounds like fun!"]
-		case "blackberry":
-			return ["Did you know blackberries contain a lot of antioxidants which protect against inflammation, neurological diseases and aging? Interesting!",
-				"Here is a fun fact about blackberries: they contain a lot of vitamins such as vitamin C, vitamin A, vitamin E, and vitamin K",
-				"Here is an interesting fact: Blackberries are also known as thimbleberries, dewberries, and brambleberries."]
-		case "blueberry":
-			return ["Did you know that there are two types of blueberries: highbush and lowbush? I didn’t!",
-				"Here is a fun fact: it only takes 4 minutes to freeze in the freezer!",
-				"Here is an interesting fact: the white, powdery substance on blueberries is called “bloom.” Bloom indicates fresh berries"]
-		case "banana":
-			return ["Did you know that bananas are technically berries? Weird!",
-				"Here is a fun fact: bananas float on water! I have to try this out!",
-				"Interesting fact: about 75 percent of the weight of a banana is water."]
+	switch (fruit) {
+	case "apple":
+		return ["Did you know that apples are part of the rose family? Cool, right?",
+			"Here is a fun fact about apple trees: they take four to five years to produce their first fruit.",
+			"Here is an interesting fact: It takes the energy from 50 leaves to produce one apple.That’s a lot of energy!"];
+	case "orange":
+		return ["Did you know that Oranges contain more fiber than most fruits and vegetables? That’s very healthy!",
+			"Here is a fun fact: the word “Orange” was first used to describe the colour and not the fruit.",
+			"Here is an interesting fact: there are now over 600 varieties of oranges worldwide!"];
+	case "strawberry":
+		return ["Did you know there are there are 200 seeds on an average strawberry? Interesting, right?",
+			"Here is a fun fact about strawberries: they are members of the rose family!",
+			"Here is an interesting fact: There is a museum in Belgium just for strawberries. Sounds like fun!"]
+	case "blackberry":
+		return ["Did you know blackberries contain a lot of antioxidants which protect against inflammation, neurological diseases and aging? Interesting!",
+			"Here is a fun fact about blackberries: they contain a lot of vitamins such as vitamin C, vitamin A, vitamin E, and vitamin K",
+			"Here is an interesting fact: Blackberries are also known as thimbleberries, dewberries, and brambleberries."]
+	case "blueberry":
+		return ["Did you know that there are two types of blueberries: highbush and lowbush? I didn’t!",
+			"Here is a fun fact: it only takes 4 minutes to freeze in the freezer!",
+			"Here is an interesting fact: the white, powdery substance on blueberries is called “bloom.” Bloom indicates fresh berries"]
+	case "banana":
+		return ["Did you know that bananas are technically berries? Weird!",
+			"Here is a fun fact: bananas float on water! I have to try this out!",
+			"Interesting fact: about 75 percent of the weight of a banana is water."]
 	}
 }
