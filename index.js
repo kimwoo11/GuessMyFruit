@@ -166,7 +166,7 @@ function getFruitFact(fruit) {
 			"Here is a fun fact: it only takes 4 minutes to freeze in the freezer!",
 			"Here is an interesting fact: the white, powdery substance on blueberries is called “bloom.” Bloom indicates fresh berries"]
 	case "banana":
-		return ["Did you know that bananas are technically berries? Weird!",
+		return ["Did you know that bananas are technically berries? Weird, right?",
 			"Here is a fun fact: bananas float on water! I have to try this out!",
 			"Interesting fact: about 75 percent of the weight of a banana is water."]
 	}
